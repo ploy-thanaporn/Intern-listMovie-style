@@ -139,22 +139,6 @@ const movies = [
     id: 18,
     image: "https://www.miramax.com/assets/Pulp-Fiction1.png",
   },
-  {
-    name: "Il buono, il brutto, il cattivo",
-    released: "1966",
-    rated: 8.8,
-    id: 19,
-    image:
-      "https://resources5.eaglepictures.com/image/1/400/600/61c215641f9a7/il-buono-il-brutto-il-cattivo-cover.jpg",
-  },
-  {
-    name: "Fight Club",
-    released: "1999",
-    rated: 8.8,
-    id: 20,
-    image:
-      "https://m.media-amazon.com/images/M/MV5BNDIzNDU0YzEtYzE5Ni00ZjlkLTk5ZjgtNjM3NWE4YzA3Nzk3XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_FMjpg_UX1000_.jpg",
-  },
 ];
 
 export default movies;

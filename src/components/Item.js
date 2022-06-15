@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import movies from "../data";
 import { AiFillStar } from "react-icons/ai";
+import ReactPaginate from "react-paginate";
+import "./Item.css";
 
 const Item = () => {
-  const movieItem = movies.map((movie) => (
+  const [currentItems, setCurrentItems] = useState([]);
+
+  const movieItem = currentItems.map((movie) => (
     <div
       key={movie.id}
       className="w-[360px] shadow-lg shadow-gray-200 mx-14 my-8 cursor-pointer mt-24"
@@ -26,7 +30,41 @@ const Item = () => {
     </div>
   ));
 
-  return <div className="grid grid-cols-3 gap-1">{movieItem}</div>;
+  const [pageCount, setPageCount] = useState(0);
+  const [itemOffset, setItemOffset] = useState(0);
+  const itemsPerPage = 9;
+
+  useEffect(() => {
+    const endOffset = itemOffset + itemsPerPage;
+
+    setCurrentItems(movies.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(movies.length / itemsPerPage));
+  }, [itemOffset, itemsPerPage]);
+
+  const handlePageClick = (movie) => {
+    const newOffset = (movie.selected * itemsPerPage) % movies.length;
+    setItemOffset(newOffset);
+  };
+
+  return (
+    <div>
+      <div className="grid grid-cols-3 gap-1">{movieItem}</div>
+      <ReactPaginate
+        nextLabel="Next"
+        onPageChange={handlePageClick}
+        pageRangeDisplayed={3}
+        pageCount={pageCount}
+        previousLabel="Previous"
+        renderOnZeroPageCount={null}
+        containerClassName="pagination"
+        pageLinkClassName="page-num"
+        previousLinkClassName="page-num"
+        nextLinkClassName="page-num"
+        activeLinkClassName="active"
+      />
+      ;
+    </div>
+  );
 };
 
 export default Item;
