@@ -32,7 +32,7 @@ const Navbar = (props) => {
         className={
           !nav
             ? "top-[80px] opacity-100 md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-zinc-900 w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px]"
-            : "  "
+            : ""
         }
       >
         <li className="mx-4 my-6 md:my-0 text-md hover:text-orange-400">
