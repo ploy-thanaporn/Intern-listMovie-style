@@ -20,7 +20,7 @@ const Navbar = (props) => {
 
         {/* icon menu */}
         <span
-          className="text-xl cursor-pointer mx-2 md:hidden block"
+          className="text-xl cursor-pointer mx-4 md:hidden block"
           onClick={handleClick}
         >
           {!nav ? <FaBars /> : <FaTimes />}
@@ -31,7 +31,7 @@ const Navbar = (props) => {
       <ul
         className={
           !nav
-            ? "top-[80px] opacity-100 md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-zinc-900 w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px]"
+            ? "md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-zinc-900 w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px]"
             : ""
         }
       >
