@@ -61,7 +61,6 @@ const Item = (props) => {
 
   return (
     <div>
-      {/* <p className="text-white">{props.searchText}</p> */}
       <div className="grid grid-flow-row justify-center md:grid-cols-3">
         {movieItem}
       </div>
