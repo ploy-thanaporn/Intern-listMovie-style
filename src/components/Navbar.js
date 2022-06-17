@@ -14,7 +14,7 @@ const Navbar = (props) => {
     <nav className="p-5 bg-zinc-900 text-white md:flex md:items-center md:justify-between">
       <div className="flex justify-between items-center">
         {/* logo */}
-        <span className="flex justify-center items-center font-bold text-xl">
+        <span className="flex justify-center items-center font-bold text-xl md:mx-16">
           <MdMovie fontSize="24px" className="mr-2" /> Movie
         </span>
 
